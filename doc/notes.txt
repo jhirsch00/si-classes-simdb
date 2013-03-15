@@ -1,0 +1,38 @@
+
+http request >>  dispatcher >> controller >> Model >> Data
+                                   V
+								   V
+			   http response <<   View   
+			
+			
+Without Scaffolding
+
+index is the root of the resource
+
+
+three kinds of variable
+	movies   scope is to the method
+	@movies  instance variable
+	@@movies class variable (the double @)   
+	
+<%-   execute the code but don't return the output
+<%=   captures the output and puts it there..
+
+anything with an @symbol, the controller gets the instance variable and passes that value to the view   
+
+the controller is a class, the movie is a class..  when you define @movies on a controller, it's the instance var for the the class controller.. 
+
+the view does not have a connection to the model only the controller so the controller is the intermediary between the two..
+
+if css were written better..  rails now includes the better way of compiling css
+install static  uses the static (css) generator
+
+
+if you say resources :movies
+		rails will generate all the correct routes for you including edit_movie_path  (ie crud functions)    
+		
+put _ infront: don't ignore this is a partial file
+
+render comes from rails, it's the same intial call, once the controller has finish call render on ti.  
+
+haml generates into html
